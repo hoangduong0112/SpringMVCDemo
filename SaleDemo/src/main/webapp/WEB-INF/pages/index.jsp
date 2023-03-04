@@ -29,25 +29,35 @@
                             </li>
                         </c:forEach>
                     </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
         <section class="container">
             <div class="row mx-1 my-2">
                 <c:forEach items="${products}" var="p">
-                <div class="col-sm-1 col-xl-3 my-2">
-                    <div class="card">
-                        <img class="card-img-top" src="${p.image}" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title">${p.name}</h4>
-                            <p class="card-text">${p.price}</p>
-                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                            <a href="#" class="btn btn-primary">Đặt hàng</a>
+                    <div class="col-sm-1 col-xl-3 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="${p.image}" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">${p.name}</h4>
+                                <p class="card-text">${p.price}</p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                <a href="#" class="btn btn-primary">Đặt hàng</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </c:forEach>
             </div>
         </section>
+        <footer>
+            <div class="mt-4 p-5 bg-primary text-white rounded">
+                <h1>Demo SpringMVC</h1>
+                <p>Hoang Duong</p>
+            </div>
+        </footer>
     </body>
 </html>
